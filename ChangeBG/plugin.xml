@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            id="ChangeBG.commands.category"
+            name="Sample Category">
+      </category>
+      <command
+            categoryId="ChangeBG.commands.category"
+            name="Miku Background"
+            id="ChangeBG.commands.sampleCommand">
+      </command>
+      <command
+            categoryId="ChangeBG.commands.category"
+            id="ChangeBG.commands.sampleCommand1"
+            name="Luffy Background">
+      </command>
+      <command
+            categoryId="ChangeBG.commands.category"
+            id="ChangeBG.commands.sampleCommand2"
+            name="Boruto Background">
+      </command>
+      <command
+            categoryId="ChangeBG.commands.category"
+            id="ChangeBG.commands.sampleCommand3"
+            name="Load Background">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="changebg.handlers.SampleHandler"
+            commandId="ChangeBG.commands.sampleCommand">
+      </handler>
+      <handler
+            class="changebg.handlers.SampleHandler"
+            commandId="ChangeBG.commands.sampleCommand1">
+      </handler>
+      <handler
+            class="changebg.handlers.SampleHandler"
+            commandId="ChangeBG.commands.sampleCommand2">
+      </handler>
+      <handler
+            class="changebg.handlers.SampleHandler"
+            commandId="ChangeBG.commands.sampleCommand3">
+      </handler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="ChangeBG.commands.sampleCommand"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            contextId="org.eclipse.ui.contexts.window"
+            sequence="M1+6">
+      </key>
+      <key
+            commandId="ChangeBG.commands.sampleCommand1"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            contextId="org.eclipse.ui.contexts.window"
+            sequence="M1+7">
+      </key>
+      <key
+            commandId="ChangeBG.commands.sampleCommand2"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            contextId="org.eclipse.ui.contexts.window"
+            sequence="M1+8">
+      </key>
+      <key
+            commandId="ChangeBG.commands.sampleCommand3"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            contextId="org.eclipse.ui.contexts.window"
+            sequence="M1+9">
+      </key>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="menu:org.eclipse.ui.main.menu?after=additions">
+         <menu
+               id="ChangeBG.menus.sampleMenu"
+               label="Change Background"
+               mnemonic="M">
+            <command
+                  commandId="ChangeBG.commands.sampleCommand"
+                  id="ChangeBG.menus.sampleCommand"
+                  mnemonic="S">
+            </command>
+            <command
+                  commandId="ChangeBG.commands.sampleCommand1"
+                  id="ChangeBG.menus.sampleCommand1"
+                  mnemonic="S">
+            </command>
+            <command
+                  commandId="ChangeBG.commands.sampleCommand2"
+                  id="ChangeBG.menus.sampleCommand2"
+                  mnemonic="S">
+            </command>
+            <command
+                  commandId="ChangeBG.commands.sampleCommand3"
+                  id="ChangeBG.menus.sampleCommand3"
+                  mnemonic="S">
+            </command>
+         </menu>
+      </menuContribution>
+   </extension>
+
+</plugin>
